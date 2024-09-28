@@ -1,0 +1,66 @@
+<!-- Created by bsj on 2024/7/23 11:04-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>栏目管理</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../../../layui-btkj/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../../css/layui_ext.css" media="all">
+    <style>
+        .layui-form-pane .layui-form-label {
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+<div class="layui-page layui-form-pane" style="padding:15px;">
+    <form class="layui-form model-form" action="" lay-filter="formOk">
+        <div class="layui-form-item">
+            <label class="layui-form-label">字段长度</label>
+            <div class="layui-input-inline" style="width: 100px;">
+                <input type="number" name="field_len" placeholder="" autocomplete="off" class="layui-input" min="0" step="1" lay-affix="number">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">显示label名称</label>
+            <div class="layui-input-inline">
+                <input type="text" name="label_name" autocomplete="off" placeholder="请输入" lay-verify="" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">校验规则</label>
+            <div class="layui-input-inline" id="verify_id">
+                <select name="verify_content" lay-filter="verify-filter">
+                    <option value="">请选择验证规则</option>
+                    <option value="phone">手机号</option>
+                    <option value="email">邮箱</option>
+                    <option value="url">网址</option>
+                    <option value="number">数字</option>
+                    <option value="date">日期</option>
+                    <option value="identity">身份证</option>
+                    <option value="regexp">自定义正则</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">可为空</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="null_able" lay-skin="switch"  title="YES|NO">
+            </div>
+        </div>
+
+        <div style="display: none;">
+            <div class="layui-input-block">
+                <button type="submit" class="layui-btn" lay-submit lay-filter="save" id="saveOK">立即保存</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script data-main="../../../js/generate/form/fieldConfig" src='../../../sys/require.min.js'></script>
+</body>
+</html>

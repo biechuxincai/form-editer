@@ -1,0 +1,71 @@
+<!-- Created by bsj on 2024/7/8 16:40-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑生成</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../../layui-btkj/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../css/layui_ext.css" media="all">
+    <link rel="stylesheet" href="../../css/color.css" media="all">
+    <link rel="stylesheet" href="../../css/soulTable.css" media="all">
+    <style>
+        .layui-input-block {
+            margin: 5px 0 5px 110px;
+        }
+
+        .layui-form-item .layui-input-inline {
+            width: 130px;
+}
+        .delete-icon {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="layui-page" style="padding: 15px;">
+    <form class="layui-form " id="editor" lay-filter="formOk">
+        <div class="layui-form-item">
+            <label class="layui-form-label">查询字段</label>
+            <div id="table_search_type">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">显示字段</label>
+            <div id="table_show_type">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">操作列</label>
+            <div id="table_option_type">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">批量操作</label>
+            <div id="table_bitch_option_type">
+            </div>
+        </div>
+        <!--        <div class="layui-form-item">-->
+        <!--            <label class="layui-form-label">列表类型</label>-->
+        <!--            <div class="layui-input-block">-->
+        <!--                <select name="tableType">-->
+        <!--                    <option value=""></option>-->
+        <!--                    <option value="0">表格</option>-->
+        <!--                    <option value="1">树形表格</option>-->
+        <!--                </select>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <div style="display: none;">
+            <div class="layui-input-block">
+                <button type="submit" class="layui-btn" lay-submit lay-filter="save" id="saveOK">立即保存</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script data-main="../../js/generate/tabledit" src='../../sys/require.min.js'></script>
+</body>
+</html>
